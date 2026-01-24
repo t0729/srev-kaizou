@@ -13,7 +13,9 @@ h1{
 }
 
 .text{
+    display: inline-block;
     font-size: 25px;
+    margin-top: 3px;
 }
 
 .text-b{
