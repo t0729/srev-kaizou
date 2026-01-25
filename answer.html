@@ -1,99 +1,66 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Googleフォームの返答方法がホームページだった質問への回答です。">
-    <title>改造版の質問等フォーム回答</title>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
+    <title>質問等フォーム回答</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap" rel="stylesheet">
+    <!-- marked.js -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <style>
-        body{
-            font-family: "Kosugi Maru",serif;
-            color: black;
+        body {
+            font-family: "Kosugi Maru", sans-serif;
             background: white;
+            color: black;
         }
+
         h1 {
             font-size: 30px;
-            font-weight: 700;
         }
-        .q{
+
+        h3 {
             font-size: 25px;
         }
-        .a{
+
+        li {
             font-size: 22px;
             margin-left: 20px;
-            margin-top: 4px;
-            display: block;
         }
-        .home{
+
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        li {
+            margin-left: 20px;
+        }
+
+        .home {
             font-size: 28px;
             font-weight: 200;
         }
     </style>
 </head>
+
 <body>
-    <h1>改造版の質問等フォームへの回答(古い順)</h1>
-    <a class="q">Q.設定で「緯経度」と表示される</a>
-    <br>
-    <a class="a">製作者様に聞いてみたところ、次回修正予定とのことです。<br>次回の正式アップデートで修正されると思われます。<br>追記:公式版では修正されました。改造版では次回アップデートで修正されます。</a>
-    <br><br>
-    <a class="q">Q.観測点震度にならない</a>
-    <br>
-    <a class="a">製作者様に報告しました。<br>公式版では修正済みです。改造版では次回アップデートで修正されます。</a>
-    <br><br>
-    <a class="q">Q.揺れ検出時の震央地名が遠地などになる</a>
-    <br>
-    <a class="a" href="https://scratch.mit.edu/projects/874829767/">kotohoさんのプロジェクト</a><a class="a">を使用して震央地名を出していますが、中身が高度過ぎて修正する気になれません。<br>追記:初期化側の問題でした。修正済みです。</a>
-    <br><br>
-    <a class="q">Q.EEWが受信できない</a>
-    <br>
-    <a class="a">最新バージョン(1.6.3-6-4)で修正済みです。</a>
-    <br><br>
-    <a class="q">Q.ホームページにバージョンアップ履歴を載せてほしい</a>
-    <br>
-    <a class="a">どんな方法になるかは分かりませんが、追加を検討します。</a>
-    <br><br>
-    <a class="q">Q.地震情報が読み上げられない</a>
-    <br>
-    <a class="a">できるだけ早く修正する予定です。<br>追記:修正しました</a>
-    <br><br>
-    <a class="q">Q.震度3以下の予想震度を表示してほしい</a>
-    <br>
-    <a class="a">予報業務にあたるため、不可能です。</a>
-    <br><br>
-    <a class="q">Q.震央推定がずれていく</a>
-    <br>
-    <a class="a">公式版側の問題だと思います。</a>
-    <br><br>
-    <a class="q">Q.改造版のsb3(ソース)が欲しい</a>
-    <br>
-    <a class="a">悪用される恐れがあるため、直接ソースを配布することはありません。</a>
-    <br><br>
-    <a class="q">Q.レイヤー変更ボタンを使用できるようにしてほしい</a>
-    <br>
-    <a class="a">過去に使用できるようにしましたが、何の変化もありませんでした。</a>
-    <br><br>
-    <a class="q">Q.効果音の変更が保存されない</a>
-    <br>
-    <a class="a">v1.6.3-8-8で修正できたと思います。</a>
-    <br><br>
-    <a class="q">Q.開けない</a>
-    <br>
-    <a class="a">iPhoneかiPadであれば対応版を作成しています。<br>追記:公開しました</a>
-    <br><br>
-    <a class="q">Q.リプレイの再生がすぐ終了する</a>
-    <br>
-    <a class="a">v1.6.3-8-8で修正済みです。</a>
-    <br><br>
-    <!--コピペ用
-    <a class="q">Q.質問</a>
-    <br>
-    <a class="a">回答</a>
-    <br><br>
-    -->
-    <br>
     <a class="home" href="./">ホームに戻る</a>
+
+    <div id="content">読み込み中...</div>
+
+    <a class="home" href="./">ホームに戻る</a>
+
+    <script>
+        fetch("answer.md")
+            .then(res => res.text())
+            .then(text => {
+                document.getElementById("content").innerHTML = marked.parse(text);
+            });
+    </script>
+
 </body>
+
+
 </html>
