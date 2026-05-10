@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,51 +8,53 @@
     <title>リアルタイム地震ビューアー(改造版)</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic&display=swap" rel="stylesheet">
     <link href="style.css" rel="stylesheet">
 </head>
-<body>
+
+<body class="container">
     <h1>リアルタイム地震ビューアー(改造版)</h1>
-    <a class="red">パッケージ版サーバーへの接続はできません。<br>また、スマホでは正常に動作しない可能性があります。</a>
-    <br>
-    <a class="red" style="font-weight: 600;">※「リアルタイム地震ビューアー」の改造版で、本家とは無関係です。</a>
-    <br>
-    <a class="red" style="font-weight: 600;">改造版の問題等をkotoho様に問い合わせることは控えてください。</a>
-    <br><br>
-    <a class="red" style="font-weight: 600;">緊急地震速報の受信には</a>
-    <a class="red" style="font-weight: 600;" href="https://wolfx.jp/apidoc">Wolfx API</a>
-    <a class="red" style="font-weight: 600;">を利用しています。</a>
-    <br><br><br>
+    <div class="alert-box">
+        <p>パッケージ版サーバーへの接続はできません。</p>
+        <br>
+        <p>本家「リアルタイム地震ビューアー」とは無関係です。</p>
+        <p>改造版の問題などをkotoho様へ問い合わせないでください。</p>
+    </div>
+
     <a class="text" style="font-weight: 700;" href="./srev-s/">改造版を開く</a>
     <br><br>
-    <a class="text" style="font-weight: 700;" href="https://t0729.github.io/srev-kaizou-iphone/">改造版(iPad,iPhone問題対応)を開く</a>
+    <a class="text" style="font-weight: 700;"
+        href="https://t0729.github.io/srev-kaizou-iphone/">改造版(iPad,iPhone問題対応)を開く</a>
     <br>
-    <a class="text" style="font-size: 22px;">iPhoneとiPadでエラーが起きて開けない問題を暫定修正したものです。<br>キャッシュストレージの使用を無効化しています。</a>
-    <br><br>
-    <a class="text">現在のバージョン: 1.6.3-8-10</a>
-    <br>
-    <a class="text" href="./release_notes.html">リリースノート</a>
-    <br><br>
-    <a class="text" style="font-weight: 800;">English version is under consideration</a>
-    <!-- <br><br>
-    <a class="text"></a> -->
-    <br><br><br>
-    <a class="text" href="https://discord.gg/C7NyvEDEaR">質問等はこちらへ(Discordサーバー)</a>
-    <br><br>
-    <a class="text" href="https://forms.gle/rfTomFZYZ8oRJ6Ea6">質問等はこちらでも受けています(Googleフォーム)</a>
-    <br><br>
-    <a class="text" href="./answer.html">質問(ホームページでの返答)への回答</a>
-    <br><br><br>
-    <a class="text" href="./other.html">その他のツールなど</a>
-    <br><br><br>
-    <a class="text-b">ライセンス・クレジット</a>
-    <br><br>
-    <a class="text" href="https://github.com/kotoho7/scratch-realtime-earthquake-viewer-page">元のプロジェクト</a>
-    <br><br>
-    <a class="text" href="https://github.com/kotoho7/scratch-realtime-earthquake-viewer-page#クレジット">元のプロジェクトのライセンス</a>
-    <br><br>
-    <a class="text" href="https://wolfx.jp/apidoc">Wolfx API(緊急地震速報のソース)</a>
-    <br><br>
-    <a class="text">CC BY-SA 2.0 ライセンスに従って公開されています。</a>
+    <a class="text" style="font-size: 22px;">iPhoneとiPadでエラーが起きて開けない問題を暫定修正したものです。
+        <br>
+        高画質での地図描画などを無効にしています。
+    </a>
+
+    <div class="info-grid">
+        <div class="info-card">
+            <h3>情報</h3>
+            <p class="item">最新バージョン: 1.6.3-9</p>
+            <a href="./release_notes.html" class="link-item">リリースノートを見る</a>
+        </div>
+
+        <div class="info-card">
+            <h3>サポート</h3>
+            <a href="https://discord.gg/C7NyvEDEaR" class="link-item">Discordサーバー</a>
+            <a href="https://forms.gle/rfTomFZYZ8oRJ6Ea6" class="link-item">Googleフォーム</a>
+            <a href="./answer.html" class="link-item">質問への回答</a>
+        </div>
+    </div>
+    <footer>
+        <p>緊急地震速報: <a href="https://wolfx.jp/apidoc">Wolfx API</a></p>
+        <p>
+            <a href="./other.html">その他のツール</a>
+        </p>
+        <p>
+            <a href="https://github.com/kotoho7/scratch-realtime-earthquake-viewer-page">リアルタイム地震ビューアー(本家)</a>
+        </p>
+        <p class="license">CC BY-SA 2.0に準拠</p>
+    </footer>
 </body>
+
 </html>

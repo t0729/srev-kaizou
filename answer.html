@@ -6,41 +6,82 @@
     <title>質問等フォーム回答</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap" rel="stylesheet">
     <!-- marked.js -->
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <style>
         body {
-            font-family: "Kosugi Maru", sans-serif;
+            font-family: "Noto Sans JP", sans-serif;
+            /* Noto Sans推奨 */
+            background: #f4f7f8;
+            /* 薄いグレー背景でカードを際立たせる */
+            color: #333;
+            line-height: 1.8;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* ホームに戻るリンク */
+        .home {
+            display: inline-block;
+            font-size: 18px;
+            color: #007bff;
+            text-decoration: none;
+            margin-bottom: 20px;
+            transition: 0.2s;
+        }
+
+        .home:hover {
+            text-decoration: underline;
+        }
+
+        /* メインコンテンツエリア */
+        #content {
             background: white;
-            color: black;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
         }
 
-        h1 {
-            font-size: 30px;
-        }
+        /* --- Markdown内の要素に対するスタイル --- */
 
-        h3 {
-            font-size: 25px;
-        }
-
-        li {
+        /* 質問（## や ### で書かれている想定） */
+        #content h2,
+        #content h3 {
             font-size: 22px;
-            margin-left: 20px;
+            border-left: 5px solid #007bff;
+            /* 青い左線 */
+            background: #f0f7ff;
+            /* 薄い青背景 */
+            padding: 10px 20px;
+            margin-top: 40px;
+            border-radius: 0 8px 8px 0;
         }
 
+        /* 回答（普通のテキスト P） */
+        #content p {
+            font-size: 18px;
+            margin: 15px 0 30px 10px;
+            color: #444;
+        }
+
+        /* 箇条書き */
         ul {
             list-style: none;
-            padding-left: 0;
+            margin-bottom: 0;
         }
 
         li {
-            margin-left: 20px;
+            font-size: 18px;
+            margin-bottom: 10px;
         }
 
-        .home {
-            font-size: 28px;
-            font-weight: 200;
+        /* 強調表示 */
+        #content strong {
+            color: #d63031;
+            background: linear-gradient(transparent 70%, #ffdfdf 70%);
+            /* 蛍光ペン風下線 */
         }
     </style>
 </head>

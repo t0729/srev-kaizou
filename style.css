@@ -1,24 +1,96 @@
 body{
-    font-family: "Kosugi Maru",sans-serif;
+    font-family: "BIZ UDPGothic",sans-serif;
     text-align: center;
 }
 
-.red{
-    font-size: 28px;
-    color: red;
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+
+/* 警告ボックス */
+.alert-box {
+    background-color: #fff5f5;
+    border: 1px solid #feb2b2;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+.alert-box p {
+    color: #c53030;
+    font-size: 20px;
+    font-weight: 700;
+    margin: 5px 0;
 }
 
 h1{
     font-size: 35px;
 }
 
+
+/* カード */
+.info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    text-align: left;
+    margin-top: 30px;
+}
+
+.info-card {
+    background-color: #f8f8f8;
+    border: 1px solid #cccccc;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.info-card h3 {
+    margin-top: 0;
+    font-size: 22px;
+    border-bottom: 2px solid #007bff;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.item {
+    display: block;
+    margin-top: 0;
+    margin-bottom: 8px;
+    font-size: 20px;
+}
+
+.link-item {
+    display: block;
+    color: #007bff;
+    margin-bottom: 8px;
+    font-size: 18px;
+}
+
+/* 普通の文字 */
 .text{
     display: inline-block;
     font-size: 25px;
     margin-top: 3px;
 }
 
-.text-b{
-    font-size: 30px;
-    font-weight: 600;
+/* フッター */
+footer {
+    margin-top: 50px;
+    padding-top: 20px;
+    border-top: 1px solid #e4e4e4;
+    font-size: 18px;
+    color: #000000;
+}
+
+footer a {
+    color: #6583b8;
+}
+
+/* スマホ用 */
+@media (max-width: 600px) {
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
 }
