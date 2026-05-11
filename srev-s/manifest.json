@@ -52,7 +52,7 @@
       "type": "image/webp"
     }
   ],
-  "name": "リアルタイム地震ビューアー",
+  "name": "リアルタイム地震ビューアー(改造版)",
   "screenshots": [
     {
       "form_factor": "wide",
@@ -125,7 +125,7 @@
       "type": "image/png"
     }
   ],
-  "short_name": "リアルタイム地震ビューアー",
+  "short_name": "リアルタイム地震ビューアー(改造版)",
   "start_url": "./",
   "theme_color": "#12151a"
 }
